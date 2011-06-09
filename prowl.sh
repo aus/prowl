@@ -7,7 +7,7 @@ app="rTorrent"
 priority=$1
 eventname=$2
 description=$3
-apikey=YOURAPIKEY # Replace YOURAPIKEY if your key
+apikey=YOURAPIKEY # Replace YOURAPIKEY with your key
 
 if [ $# -ne 3 ]; then
 echo "prowl"
