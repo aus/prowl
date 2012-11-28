@@ -1,8 +1,11 @@
 #! /bin/sh
 # Script by aus
+# Adjustments for Pushover by Zettt
 # Requirements: curl
-# Usage: ./prowl.sh priority(-2 to 2) appname description
-# Example: ./prowl.sh 0 "hello world" "this is only a test"
+# Usage: ./pushover.sh message title url url_title priority device'
+# Example: ./pushover.sh "this is a test" "test title" "http://github.com" "GitHub" 0 "iPad"'
+# Note: All parameters except message are optional'
+
 app="Application Name"
 message=$1
 title=$2
