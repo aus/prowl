@@ -4,10 +4,12 @@
 # Usage: ./prowl.sh priority(-2 to 2) appname description
 # Example: ./prowl.sh 0 "hello world" "this is only a test"
 app="Application Name"
-priority=$1
-eventname=$2
-description=$3
-apikey=YOURAPIKEY # Replace YOURAPIKEY with your key
+message=$1
+title=$2
+url=$3
+url_title=$4
+priority=$5
+device=$6
 
 if [ $# -ne 3 ]; then
 	echo "prowl"
