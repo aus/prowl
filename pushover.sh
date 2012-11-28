@@ -11,10 +11,11 @@ url_title=$4
 priority=$5
 device=$6
 
-if [ $# -ne 3 ]; then
-	echo "prowl"
-	echo "Usage: ./prowl.sh priority(-2 to 2) appname description"
-	echo 'Example: ./prowl.sh 0 "linux" "this is a test"'
+if [ $# -lt 1 ]; then
+	echo 'prowl'
+	echo 'Usage: ./pushover.sh message title url url_title priority device'
+	echo 'Example: ./pushover.sh "this is a test" "test title" "http://github.com" "GitHub" 0 "iPad"'
+	echo 'Note: All parameters except message are optional'
 else
 	curl https://api.pushover.net/1/messages.json -F token=$apikey -F user=$userkey -F message="$message" -F title="$title" -F url="$url" -F url_title="$url_title" -F priority="$priority" -F device="$device"
 fi
