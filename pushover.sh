@@ -10,6 +10,8 @@ url=$3
 url_title=$4
 priority=$5
 device=$6
+userkey=YOURUSERKEY # Look at https://pushover.net/ to find your user key
+apikey=YOURAPIKEY # Replace YOURAPIKEY with your key
 
 if [ $# -lt 1 ]; then
 	echo 'prowl'
