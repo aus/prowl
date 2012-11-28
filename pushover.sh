@@ -16,5 +16,5 @@ if [ $# -ne 3 ]; then
 	echo "Usage: ./prowl.sh priority(-2 to 2) appname description"
 	echo 'Example: ./prowl.sh 0 "linux" "this is a test"'
 else
-	curl https://prowl.weks.net/publicapi/add -F apikey=$apikey -F priority=$priority -F application="$app" -F event="$eventname" -F description="$description"
+	curl https://api.pushover.net/1/messages.json -F token=$apikey -F user=$userkey -F message="$message" -F title="$title" -F url="$url" -F url_title="$url_title" -F priority="$priority" -F device="$device"
 fi
