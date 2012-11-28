@@ -10,9 +10,9 @@ description=$3
 apikey=YOURAPIKEY # Replace YOURAPIKEY with your key
 
 if [ $# -ne 3 ]; then
-echo "prowl"
-echo "Usage: ./prowl.sh priority(-2 to 2) appname description"
-echo 'Example: ./prowl.sh 0 "linux" "this is a test"'
+	echo "prowl"
+	echo "Usage: ./prowl.sh priority(-2 to 2) appname description"
+	echo 'Example: ./prowl.sh 0 "linux" "this is a test"'
 else
-curl https://prowl.weks.net/publicapi/add -F apikey=$apikey -F priority=$priority -F application="$app" -F event="$eventname" -F description="$description"
+	curl https://prowl.weks.net/publicapi/add -F apikey=$apikey -F priority=$priority -F application="$app" -F event="$eventname" -F description="$description"
 fi
